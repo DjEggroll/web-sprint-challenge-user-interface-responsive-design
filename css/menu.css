@@ -49,6 +49,8 @@ table {
 
 * {
     box-sizing: border-box;
+    color:rgb(225, 239, 230);
+    background-color: rgb(0, 4, 17, .5);
 }
 
 html {
@@ -79,7 +81,7 @@ h3 {
 }
 
 h4 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 p, a {
@@ -94,6 +96,15 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+header div h1{
+    text-align: center;
+}
+
+header nav div{
+    display:flex;
+    justify-content: space-evenly;
 }
 
 /* spacer */
@@ -120,6 +131,31 @@ header {
     background-repeat: no-repeat;
 }
 
+.menu-container h2{
+    text-align: center;
+    border: 1px solid white; 
+}
+
+.menu-section{
+    margin: 15px 0;
+}
+
+
+.menu-item{
+    display:flex;
+    flex-wrap:wrap;
+    margin-bottom: 10px;
+    border: 1px solid white; 
+}
+
+.menu-item h4{
+    width:40%;
+}
+
+.menu-item p{
+    width: 100%;
+}
+
 /* footer section */
 footer {
     width: 100%;
@@ -131,16 +167,35 @@ footer {
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    .header-title {
-        width: 75%;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 4rem;
+    header {
+        width: 100%;
+        height: 100%;
+        background-image: none;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
+    
+    header div h1{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    header nav div{
+        display:flex;
+        flex-direction: column;
+        margin: 5px 0;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+    
 
     /* menu */
     .menu {
         background-image: none;
+        display:flex;
+        flex-direction: column;
     }
 
     /* footer section */
@@ -148,5 +203,14 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        display:flex;
+        flex-direction: column;
     }
+
+    footer div nav{
+        display:flex;
+        flex-direction: column;
+    }
+
+
 }
